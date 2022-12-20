@@ -15,9 +15,10 @@ struct SignInView: View {
                     .frame(height: 100, alignment: .center)
                     .offset(x:0,y:50)
                 TextField("電子郵件",text: $email).textFieldStyle(RoundedBorderTextFieldStyle()).frame(width: 300, height: 50, alignment: .center)
-                    .offset(x:0,y:150)
+                    .offset(x:0,y:100)
                 SecureField("密碼",text: $password).textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 300, height: 100, alignment: .center)
+                    .offset(x:0,y:70)
                 Button(action: {
                     let url = URL(string: "https://favqs.com/api/session")!
                     var request = URLRequest(url: url)
