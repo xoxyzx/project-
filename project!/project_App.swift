@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct project_App: App {
+    @StateObject private var loginData = Login()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if loginData.token == ""
+            {
+                SignInView().environmentObject(loginData)
+            }else{
+                ContentView().environmentObject(loginData)
+            }
         }
     }
 }
